@@ -28,7 +28,7 @@ func UserSignUp(o http.ResponseWriter, r *http.Request) {
 	body, err := ioutil.ReadAll(r.Body)
 	if err != nil {
 		fmt.Println("service.user.UserSignUp: read body error")
-		ResponseError(o, ErrPasswdInvalid)
+		ResponseError(o, ErrParamInvalid)
 		return
 	}
 	defer r.Body.Close()
